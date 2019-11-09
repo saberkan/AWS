@@ -47,4 +47,9 @@ S3 SLA 99.99 availability, garanty, 99.9999999% durability
 - Edge locations is not Read only, and has TTL for caching.
 - Caching clear (invalidate cache) is charged
 
+# Snowball
+- Snowball : tranfer huge amounts of data. 50Tb or 80T with encryption capacity
+- Snowball edge : 100TB with computing capacities
+- Snowball snowmobil : Exabytes of data
+- Snowball can import and export to and from S3
 
