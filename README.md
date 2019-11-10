@@ -55,5 +55,5 @@ S3 SLA 99.99 availability, garanty, 99.9999999% durability
 
 # Storage Gateway
 - virtual or physical appliance that connects on-promise datacenter to cloud storage.
-- it vomes also as vm for vmware exsi or Microsoft hyper-v
-- it has three types : file Gateway as NFS/SMB than can be stored into s3, Volume Storage as ISCSI that stores volumes (all data is stored backed up as S3 EBS into S3) or only cached volume (that backsup only frequently accessed data, and Virtual Tape Lobriry (vtl) that backsup tapes into S3. 
+- it comes also as vm for vmware exsi or Microsoft hyper-v
+- it has three types : file Gateway as NFS/SMB than can be stored into s3, Volume Storage (block) as ISCSI that stores volumes (all data is stored backed up as S3 EBS into S3) as snapshots or only cached volume (that backsup only frequently accessed data, and Virtual Tape Lobriry (vtl) that backsup tapes into S3. 
