@@ -3,18 +3,18 @@ Basic mode: free
 Developer mode 29$/month: one contact can exange by email with support
 Entreprise 100$/month: instant exchange 7/7 24/24 support for stratégique production purpose
 
-IAM:
-# IAM
+# IAM:
+## IAM
 - Region is global : universal
 - root account completly admin
 - new users have no permission by default
 - new users have access key ID, secret key (for programmatic access) and password (fo console)
 
-# BILLING ALARM
+## BILLING ALARM
 - CloudWatch and SNS (simple notification service)
 - How can you get automatic auth for billing: Create billing alarm on cloudWatch and SNS  to send notification by email through a topic
 
-# S3
+## S3
 - Safe place to store files
 - Object based storage
 - File can be from 0 to 5TB
@@ -39,7 +39,7 @@ S3 SLA 99.99 availability, garanty, 99.9999999% durability
 - Replication doesnt replicat old objects even when versionned. it replicates only new files and new version of old files
 - REplication doesnt apply on delete marker
 
-# CloudFront
+## CloudFront
 - A global universal service
 - Edge location caching for different origins EC2, S3, Route53 etc.
 - Distribution name of CDN a collection of Edge locations separate frm AWS Regions/AZ
@@ -47,13 +47,19 @@ S3 SLA 99.99 availability, garanty, 99.9999999% durability
 - Edge locations is not Read only, and has TTL for caching.
 - Caching clear (invalidate cache) is charged
 
-# Snowball
+## Snowball
 - Snowball : tranfer huge amounts of data. 50Tb or 80T with encryption capacity
 - Snowball edge : 100TB with computing capacities
 - Snowball snowmobil : Exabytes of data
 - Snowball can import and export to and from S3
 
-# Storage Gateway
+## Storage Gateway
 - virtual or physical appliance that connects on-promise datacenter to cloud storage.
 - it comes also as vm for vmware exsi or Microsoft hyper-v
 - it has three types : file Gateway as NFS/SMB than can be stored into s3, Volume Storage (block) as ISCSI that stores volumes (all data is stored backed up as S3 EBS into S3) as snapshots or only cached volume (that backsup only frequently accessed data, and Virtual Tape Lobriry (vtl) that backsup tapes into S3. 
+
+# EC2
+## INTRODUCTION
+- Élastic compute resources
+- 3 types of pricing: on demand by hour or second, reserved ( 1 to 3 years) then you pay as you go. less expensive ( it had 3 typez standard 75% less, convertible to change type of machine 54% less, and schedulable you reserve only scheduled time.
+- many types of resources : FIGHTDRMCPXZAU F(financial analysis big data) I (IOPS fast storage as noSQL) G (GRAPHICS) H (High disk as DB) T ( low cost) D (Disk) R (High Ram) P (GRAPHICS) X (High RAM) Z (high ram and cpu) A (arm based) U (bar-metal)
