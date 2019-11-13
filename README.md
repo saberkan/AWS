@@ -63,3 +63,13 @@ S3 SLA 99.99 availability, garanty, 99.9999999% durability
 - Élastic compute resources
 - 3 types of pricing: on demand by hour or second, reserved ( 1 to 3 years) then you pay as you go. less expensive ( it had 3 typez standard 75% less, convertible to change type of machine 54% less, and schedulable you reserve only scheduled time.
 - many types of resources : FIGHTDRMCPXZAU F(financial analysis big data) I (IOPS fast storage as noSQL) G (GRAPHICS) H (High disk as DB) T ( low cost) D (Disk) R (High Ram) P (GRAPHICS) X (High RAM) Z (high ram and cpu) A (arm based) U (bar-metal)
+
+## EC2
+- root disk cannot be encrypted at starting time, else disks can
+- terminating security is disabled by default. you need to enable it
+
+## SG
+- a security group rule takes effect immediately
+- a security group is stateful, when inbound rule is createe outboud is created too (not showed tto interface)
+- security groups disable everything by default, you can only allow
+- in contrast NACL ((network access control list on vpc) allws to configure allow and block rules. and also it's stateful you need to configure inbound and outboud for each rule.
