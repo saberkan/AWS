@@ -75,7 +75,7 @@ S3 SLA 99.99 availability, garanty, 99.9999999% durability
 - in contrast NACL ((network access control list on vpc) allws to configure allow and block rules. and also it's stateful you need to configure inbound and outboud for each rule.
 
 ## EBS
-- see image for types. 
+- see image for types. [EBS types](https://github.com/saberkan/AWS/blob/master/Screenshot_2019-11-14-09-06-32-690_com.udemy.android.jpg)
 - When creating an image from a volume you need to define virtualization tech. there is HVM (Hardware virt. machine) which the default and harware assistant virt., and Paravirtualization tech. 
 - You may use hvm because it supports almost all type of instances while pv does not. 
 - a volume is always in the same az than the instance. 
