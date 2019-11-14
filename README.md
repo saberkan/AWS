@@ -73,3 +73,14 @@ S3 SLA 99.99 availability, garanty, 99.9999999% durability
 - a security group is stateful, when inbound rule is createe outboud is created too (not showed tto interface)
 - security groups disable everything by default, you can only allow
 - in contrast NACL ((network access control list on vpc) allws to configure allow and block rules. and also it's stateful you need to configure inbound and outboud for each rule.
+
+## EBS
+- see image for types. 
+- When creating an image from a volume you need to define virtualization tech. there is HVM (Hardware virt. machine) which the default and harware assistant virt., and Paravirtualization tech. 
+- You may use hvm because it supports almost all type of instances while pv does not. 
+- a volume is always in the same az than the instance. 
+- root volume is deleted by default when instance terminated. others are not by default.
+- volume type and size can be edited with out need to restart. 
+- to migrate a volume EC2 to another az. you need to create image of it. then deploy it to another az. 
+- to migrate a volume EC2 to another region. you need to take snapshot and then copy it to other region. 
+- volume exists u der ebs, and snapshots under s3
