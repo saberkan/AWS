@@ -105,3 +105,12 @@ S3 SLA 99.99 availability, garanty, 99.9999999% durability
 - Every 5mmin by default, you can put 1min by turning on detailed monitoring
 - You can create alarms which trigger notifs
 - You can create Dashboards, alarms, or source Events, and aggregate logs
+
+## CLI
+- CLI is universal with programmatic access
+- .aws/credentials for storing credentials, and .aws/config for configuration
+
+## IAM roles
+- You can create roles and attach them to EC2 instance, user..
+- Roles are more secure than storing access and secret key on isntance
+- Role are made from policies, Version, Statement (Effect: Allow for example, Action, resource)
