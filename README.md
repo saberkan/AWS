@@ -83,4 +83,11 @@ S3 SLA 99.99 availability, garanty, 99.9999999% durability
 - volume type and size can be edited with out need to restart. 
 - to migrate a volume EC2 to another az. you need to create image of it. then deploy it to another az. 
 - to migrate a volume EC2 to another region. you need to take snapshot and then copy it to other region. 
-- volume exists u der ebs, and snapshots under s3
+- volume exists under ebs, and snapshots under s3
+
+## AMI Types
+- To lunch a EC2 instance, you can filter by architecture, OS, and storage type
+- 2 types of storage, Block EBS from EBS snapshot, or Instance store volumes from a template (ephemeral storage).`
+- You can add many instance stores at creating time, but not later in contrast of EBS
+- You cannot stop instance store istance, you can only reboot or terminate
+- If instance store instanec failed, you lose the data. When reboot you dont loose data.
