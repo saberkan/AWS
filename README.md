@@ -121,6 +121,11 @@ S3 SLA 99.99 availability, garanty, 99.9999999% durability
 - metadata used to get information about instance
 
 ## EFS (elastic file system)
+- support NFSv4
+- you pay as you use no pre-provisionning required
+- can scale to petabytes, can support thousands of concurrent NFS connections
+- Data can be stored accross different AZ whithin region
+- Read after write consistency
 - file storage for EC2 (can be shared accross many instances)
 - you can show AZ accross which EFS will be available in VPC
 - you can enable lifecycle management, what to do if file where not accessed for x days, and where moving them
