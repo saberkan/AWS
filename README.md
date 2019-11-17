@@ -119,3 +119,11 @@ S3 SLA 99.99 availability, garanty, 99.9999999% durability
 - inside instance run curl http://169.254.169.254/latest/user-data it shows the bootstrap script
 - curl http://169.254.169.254/latest/meta-data/.. (many options network, metrics, local-ipv4, public-ipv4)
 - metadata used to get information about instance
+
+## EFS (elastic file system)
+- file storage for EC2 (can be shared accross many instances)
+- you can show AZ accross which EFS will be available in VPC
+- you can enable lifecycle management, what to do if file where not accessed for x days, and where moving them
+- you need to add inboud rule (2049)port nfs to access EFS from the EC2 
+- you need to mount it folowing instructions given by aws
+yum install amazon-efs-utils; sudo mount -t efs fs-xxx:/ /var/xxx, or nfs. you can use -o for tls encryption
