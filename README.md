@@ -132,3 +132,14 @@ S3 SLA 99.99 availability, garanty, 99.9999999% durability
 - you need to add inboud rule (2049)port nfs to access EFS from the EC2 
 - you need to mount it folowing instructions given by aws
 yum install amazon-efs-utils; sudo mount -t efs fs-xxx:/ /var/xxx, or nfs. you can use -o for tls encryption
+
+## placement groups 
+- A way to place EC2 instances
+- Clustered placement group (group instances close together): group of instances whithing single AZ for application with low network latency, high network throughput or both. Only certain isntances can be in C. P. G. => when you want instance be close together
+- Spread placement group: distinct underlying hardware, for applications that have small number of critical instances that should be separated from each other.
+- Partitionned placement group: similar to S. I. G. ensure each parition within a placement group has it's own rack (netwok and power source), allowing to isolate impacte of harware failure.
+- So basically 1 instance in spread placement, but many in Partitionned placement. that's the main difference.
+- a clustered placement group can span multiple AZ. also can other types.
+- name of placement group must be uique accross AWS account.
+- only certain type can be launched in placement group (Compute optimized, GPU, memory optimized, storage optimized)
+- you cant merge palcement group, and you can add exiting instance to placement group (create ami from existing instance and launch it into placement group)
