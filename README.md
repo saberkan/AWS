@@ -91,3 +91,10 @@ S3 SLA 99.99 availability, garanty, 99.9999999% durability
 - You can add many instance stores at creating time, but not later in contrast of EBS
 - You cannot stop instance store istance, you can only reboot or terminate
 - If instance store instanec failed, you lose the data. When reboot you dont loose data.
+
+## Encrypted root device
+- Now you can create crypted device volume root
+- At the beggining it wasn't the case, you had to create the instance, snapshot the volume, and copy the volume to encrypted volume, and create an instance form it.
+- You cannot create an uncrypted snapshot from crypted volume
+- you can share snapshots with other AWS accounts or public only if they are unencrypted
+
