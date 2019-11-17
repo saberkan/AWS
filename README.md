@@ -135,8 +135,8 @@ yum install amazon-efs-utils; sudo mount -t efs fs-xxx:/ /var/xxx, or nfs. you c
 
 ## placement groups 
 - A way to place EC2 instances
-- Clustered placement group (group instances close together): group of instances whithing single AZ for application with low network latency, high network throughput or both. Only certain isntances can be in C. P. G. => when you want instance be close together
-- Spread placement group: distinct underlying hardware, for applications that have small number of critical instances that should be separated from each other.
+- Clustered placement group (group instances close together): group of instances whithing single AZ for application with low network latency, high network throughput or both. Only certain isntances can be in C. P. G. => when you want instance be close together within 1 zone.
+- Spread placement group: distinct underlying hardware, for applications that have small number of critical instances that should be separated from each other. within multiple zones also
 - Partitionned placement group: similar to S. I. G. ensure each parition within a placement group has it's own rack (netwok and power source), allowing to isolate impacte of harware failure.
 - So basically 1 instance in spread placement, but many in Partitionned placement. that's the main difference.
 - a clustered placement group can span multiple AZ. also can other types.
