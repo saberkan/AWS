@@ -143,3 +143,4 @@ yum install amazon-efs-utils; sudo mount -t efs fs-xxx:/ /var/xxx, or nfs. you c
 - name of placement group must be uique accross AWS account.
 - only certain type can be launched in placement group (Compute optimized, GPU, memory optimized, storage optimized)
 - you cant merge palcement group, and you can add exiting instance to placement group (create ami from existing instance and launch it into placement group)
+- Spread placement groups have a specific limitation that you can only have a maximum of 7 running instances per Availability Zone
