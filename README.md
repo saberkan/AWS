@@ -98,3 +98,10 @@ S3 SLA 99.99 availability, garanty, 99.9999999% durability
 - You cannot create an uncrypted snapshot from crypted volume
 - you can share snapshots with other AWS accounts or public only if they are unencrypted
 
+## CloudWatch
+- Can monitor performance Compute resources (EC2, ELB, Autoscaling groups, Route 53 healthchecks), Sotrage (EBS, Storage gatways and cloudfront)
+- on EC2 : CPU, NEtwork, Disk, Status check
+- Be carreful to not be confused with CloudTrail (monitor api calls to AWS, audit) that increase AWS user actions not metrics, IP source from where the call was made
+- Every 5mmin by default, you can put 1min by turning on detailed monitoring
+- You can create alarms which trigger notifs
+- You can create Dashboards, alarms, or source Events, and aggregate logs
