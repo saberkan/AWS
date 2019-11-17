@@ -114,3 +114,8 @@ S3 SLA 99.99 availability, garanty, 99.9999999% durability
 - You can create roles and attach them to EC2 instance, user..
 - Roles are more secure than storing access and secret key on isntance
 - Role are made from policies, Version, Statement (Effect: Allow for example, Action, resource)
+
+## Instance metadata
+- inside instance run curl http://169.254.169.254/latest/user-data it shows the bootstrap script
+- curl http://169.254.169.254/latest/meta-data/.. (many options network, metrics, local-ipv4, public-ipv4)
+- metadata used to get information about instance
