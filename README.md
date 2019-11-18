@@ -144,3 +144,12 @@ yum install amazon-efs-utils; sudo mount -t efs fs-xxx:/ /var/xxx, or nfs. you c
 - only certain type can be launched in placement group (Compute optimized, GPU, memory optimized, storage optimized)
 - you cant merge palcement group, and you can add exiting instance to placement group (create ami from existing instance and launch it into placement group)
 - Spread placement groups have a specific limitation that you can only have a maximum of 7 running instances per Availability Zone
+
+## Databases
+- RDS: relational databases. uses multizone for failover, and read replicas for performance
+- read replicas has different url, and limit is 5.
+- RDS: OLTP (ONLINE TRANSACTION PROCESSING) to make one business request (sql, mysql, postgres, oracle, aurora, mariadb)
+- Dynamodb: non relational databases
+- Redshift: datawarehouseing for BI
+- Redshift: OLAP (ONLINE ANALYTICS PROCESSING) FOR MORE COMPLICATED QUERIES THAT NEEDS MANY REQUESTS
+- ElasticCache: for caching most accessed information (memcached or redis) which improve performance of app.
