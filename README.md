@@ -159,5 +159,5 @@ yum install amazon-efs-utils; sudo mount -t efs fs-xxx:/ /var/xxx, or nfs. you c
 - each replica has it's endpoint
 - elasticcache and read replicas are used for performance. 
 - replocas for heavy reading and elastic for same data reading
-- there is 2 kind of backups : automated whithin a day or 35. it backs up the data and all the transactions. then snapshot db stored into s3. 
+- there is 2 kind of backups : automated whithin a daily based has a retention from 1 to 35 days. it uses the last snapshot and applies transactions logs of the day to it. it backs up the data and all the transactions. then snapshot db stored into s3. 
 - db encryption goes into all underlying read replicas and snapshots. and uses aws kms
