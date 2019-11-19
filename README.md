@@ -153,3 +153,11 @@ yum install amazon-efs-utils; sudo mount -t efs fs-xxx:/ /var/xxx, or nfs. you c
 - Redshift: datawarehouseing for BI
 - Redshift: OLAP (ONLINE ANALYTICS PROCESSING) FOR MORE COMPLICATED QUERIES THAT NEEDS MANY REQUESTS
 - ElasticCache: for caching most accessed information (memcached or redis) which improve performance of app.
+- read replicas can have read replicas.
+- you can create read replicas for multizone db
+- you can create replica to different zone or even region
+- each replica has it's endpoint
+- elasticcache and read replicas are used for performance. 
+- replocas for heavy reading and elastic for same data reading
+- there is 2 kind of backups : automated whithin a day or 35. it backs up the data and all the transactions. then snapshot db stored into s3. 
+- db encryption goes into all underlying read replicas and snapshots. and uses aws kms
