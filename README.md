@@ -160,7 +160,8 @@ yum install amazon-efs-utils; sudo mount -t efs fs-xxx:/ /var/xxx, or nfs. you c
 - elasticcache and read replicas are used for performance. 
 - replocas for heavy reading and elastic for same data reading
 - there is 2 kind of backups : automated whithin a daily based has a retention from 1 to 35 days. it uses the last snapshot and applies transactions logs of the day to it. it backs up the data and all the transactions. then snapshot db stored into s3. 
-- db encryption goes into all underlying read replicas and snapshots. and uses aws kms
+- db encryption goes into all underlying read replicas and snapshots and automated backups. and uses aws kms
 - the restored will be always a new Instance whith different endpoint.
 - to apply read replicas, you need to enable backups firs
 - a read replicas can be promoted to master but it breaks the replica
+- aurora doesn't have multizone because it's has an resilient architecture already for dr (disaster recovery) and failover
