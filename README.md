@@ -175,3 +175,15 @@ yum install amazon-efs-utils; sudo mount -t efs fs-xxx:/ /var/xxx, or nfs. you c
 - stored on ssd storage
 - has eventual consistency read as default for reading equal or more then a second after writing
 - and strongly consistent read for les than one second read
+
+## RDS
+- uses node 160G, and adding to it until 180 nodes
+- 1 leader and other computes. the leader does distribution of data and queries
+- charged only on compute nodes. 
+- backups from 1 to 35 days. 
+- only on 1 az.
+- keep at least 3 copies. original data, nodes replicas, and s3.
+- can also asynchrounsly copy data to other region for DR.
+- use encryption at transit time, and aes-256 at rest time.
+- uses column compression since data is same type it takes less space than rds
+
