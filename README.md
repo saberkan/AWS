@@ -187,3 +187,10 @@ yum install amazon-efs-utils; sudo mount -t efs fs-xxx:/ /var/xxx, or nfs. you c
 - use encryption at transit time, and aes-256 at rest time.
 - uses column compression since data is same type it takes less space than rds
 
+## Aurora
+- aws proprietary mysql db
+- uses 2 replicas whithin each zone in 3 zones so 6 replicas
+- handles write even whith 2 loses, and read at 3 loses
+- you can make it as replicas of mysql db, or make mysql replicas for it but it impacts performance
+- to migrate from mysql to aurora and visversa, 2 solution, create replicas and promote the replica, or create snapshot and create db from snapshot. 
+- create snapshot allows also to create db into other aws account 
