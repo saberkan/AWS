@@ -194,3 +194,9 @@ yum install amazon-efs-utils; sudo mount -t efs fs-xxx:/ /var/xxx, or nfs. you c
 - you can make it as replicas of mysql db, or make mysql replicas for it but it impacts performance
 - to migrate from mysql to aurora and visversa, 2 solution, create replicas and promote the replica, or create snapshot and create db from snapshot. 
 - create snapshot allows also to create db into other aws account 
+
+## Elasticache
+- increase db and app performance
+- uses memcached for horizontally scalling and simple use case
+- or redis for scalling different types pf data sub/pub strategy, backups, multizone etc.
+- exam question will be like how to increase db performance ( answer: by using replicas or cache)
