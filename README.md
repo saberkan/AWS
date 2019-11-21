@@ -200,3 +200,12 @@ yum install amazon-efs-utils; sudo mount -t efs fs-xxx:/ /var/xxx, or nfs. you c
 - uses memcached for horizontally scalling and simple use case
 - or redis for scalling different types pf data sub/pub strategy, backups, multizone etc.
 - exam question will be like how to increase db performance ( answer: by using replicas or cache)
+
+# Route53
+## DNS
+- a résolution of domaine name goes through top level for example (.com) that gives a NS record to the domain registrar. and once in ns name server. 
+we find a SOA (start of authority) that gives A recors for each domain and ip adress (PTR) for reverse. 
+at that level you may find CNAME to resolve domaine name to another. but this doesn't work with apex records (toto.com) you need to use Alias record. 
+- For exam ELBs doesn't have IP by default. you resolve them with DNS name
+- For exam always choose alias record rather cname when it comes to ec2
+
