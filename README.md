@@ -209,6 +209,10 @@ at that level you may find CNAME to resolve domaine name to another. but this do
 - For exam ELBs doesn't have IP by default. you resolve them with DNS name
 - For exam always choose alias record rather cname when it comes to ec2
 
-# Register a domaine name
+## Register a domaine name
 - you can buy it in Amazon
 - it could take 3 days to appear in hosted zones
+
+## Simple domaine record
+- one domaine record to multiple ip adress. 
+- the resolution is done randomly. be careful about ttl (the client dns keeps the same ip for ttl)
