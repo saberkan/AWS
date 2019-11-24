@@ -235,6 +235,10 @@ at that level you may find CNAME to resolve domaine name to another. but this do
 - where traffic will be send based on geographic location of user, for example queries from europe to europ ec2 etc.
 - location can be done on continent or countries
 
+## Geo-proximity
+- You create complicated flows to to resources based on users location and resources.
+- it uses trafic flows, You need to create a trafic policy
+
 ## Multivalue answer policies
 - configure Route53 to return multivalues for each record.
 - you can check the health on each resource, so route53  return only healthy resources
