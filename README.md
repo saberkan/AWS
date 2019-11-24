@@ -234,3 +234,8 @@ at that level you may find CNAME to resolve domaine name to another. but this do
 ## Geo-localisation routing
 - where traffic will be send based on geographic location of user, for example queries from europe to europ ec2 etc.
 - location can be done on continent or countries
+
+## Multivalue answer policies
+- configure Route53 to return multivalues for each record.
+- you can check the health on each resource, so route53  return only healthy resources
+- Basically it's like simple but allows to attach healthcheck also
