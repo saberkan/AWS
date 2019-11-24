@@ -230,3 +230,7 @@ at that level you may find CNAME to resolve domaine name to another. but this do
 ## Failover policy
 - Active passive set up. if primary fails switch to secondary
 - fail checked against healthcheck
+
+## Geo-localisation routing
+- where traffic will be send based on geographic location of user, for example queries from europe to europ ec2 etc.
+- location can be done on continent or countries
