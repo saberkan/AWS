@@ -222,3 +222,7 @@ at that level you may find CNAME to resolve domaine name to another. but this do
 - you can set healthchecks in individual records
 - when EC2 fail healthcheck associated to the entry, it will not be served
 - healthcheck can be associated to SNS record
+
+## Latency based routing
+- Balancing according to latency of user (region)
+- health check can be attachd to every policy except simple
