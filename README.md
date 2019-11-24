@@ -216,3 +216,9 @@ at that level you may find CNAME to resolve domaine name to another. but this do
 ## Simple domaine record
 - one domaine record to multiple ip adress. 
 - the resolution is done randomly. be careful about ttl (the client dns keeps the same ip for ttl)
+
+## Weighted routing policy
+- Split traficc accorsing to weight, for example: 10% to us-east-1 and the rest to ue-east-1
+- you can set healthchecks in individual records
+- when EC2 fail healthcheck associated to the entry, it will not be served
+- healthcheck can be associated to SNS record
