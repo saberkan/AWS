@@ -226,3 +226,7 @@ at that level you may find CNAME to resolve domaine name to another. but this do
 ## Latency based routing
 - Balancing according to latency of user (region)
 - health check can be attachd to every policy except simple
+
+## Failover policy
+- Active passive set up. if primary fails switch to secondary
+- fail checked against healthcheck
