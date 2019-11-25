@@ -243,3 +243,15 @@ at that level you may find CNAME to resolve domaine name to another. but this do
 - configure Route53 to return multivalues for each record.
 - you can check the health on each resource, so route53  return only healthy resources
 - Basically it's like simple but allows to attach healthcheck also
+
+
+# VPC 
+## Intro
+- A logical section of aws cloud, allows you to create virtual networks
+- you can do peering between vpcs but no transit peering
+- by default 192.168/16 or 10.0.0.0/8 or 172.16.0.0/16 are private cidrs you can use
+
+# labs
+- when creating vpc, you get routing table, network acl and security groups created by default 
+- then you need to create subnets, by default they don't have public ip assigned, thus you need to enable it if you want it to be accessible. 
+ 
