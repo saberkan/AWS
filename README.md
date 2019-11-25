@@ -256,3 +256,5 @@ at that level you may find CNAME to resolve domaine name to another. but this do
 - then you need to create subnets, by default they don't have public ip assigned, thus you need to enable it if you want it to be accessible. 
 - you can only have 1 internet gatway per vpc
 - a subnet is attached to one availability zone
+- sécuriy groups can't span vpc
+- aws reserve 5 ips for e1ch subnet, one for breascast, one for network id, one for dns, one for router and one for future use
