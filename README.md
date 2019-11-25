@@ -254,4 +254,5 @@ at that level you may find CNAME to resolve domaine name to another. but this do
 # labs
 - when creating vpc, you get routing table, network acl and security groups created by default 
 - then you need to create subnets, by default they don't have public ip assigned, thus you need to enable it if you want it to be accessible. 
- 
+- you can only have 1 internet gatway per vpc
+- a subnet is attached to one availability zone
