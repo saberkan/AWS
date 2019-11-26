@@ -261,5 +261,6 @@ at that level you may find CNAME to resolve domaine name to another. but this do
 - to allow communication between private and public subnet, you need to attach a security group on the instance that allows the source (public subnet)
 
 ## NAT 
-- to allow an instance from private subnet to access internet. you need to create a nat instance on public subnet, then create a for private subnet that goes to internet across the nat instance.
-- nat instance is only a type of ec2 instances, nat gateway is a failover cluster of nat. both allows a private subnet to access internet.
+- to allow an instance from private subnet to access internet. you need to create a nat instance on public subnet, atttach the instance to dmz security group then create a route for private subnet that goes to internet across the nat instance. and disable destination/target check on the instance network.
+- nat instance is only a type of ec2 instances, nat gateway is a failover highavailable nat redendant within az. both allows a private subnet to access internet.
+- you can use nat instances to build ha architecture using elbs etc. but it's a pain, just use nat gateway and add route to it.
