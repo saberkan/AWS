@@ -251,10 +251,15 @@ at that level you may find CNAME to resolve domaine name to another. but this do
 - you can do peering between vpcs but no transit peering
 - by default 192.168/16 or 10.0.0.0/8 or 172.16.0.0/16 are private cidrs you can use
 
-# labs
+## labs
 - when creating vpc, you get routing table, network acl and security groups created by default 
 - then you need to create subnets, by default they don't have public ip assigned, thus you need to enable it if you want it to be accessible. 
 - you can only have 1 internet gatway per vpc
 - a subnet is attached to one availability zone
 - sécuriy groups can't span vpc
 - aws reserve 5 ips for e1ch subnet, one for breascast, one for network id, one for dns, one for router and one for future use
+- to allow communication between private and public subnet, you need to attach a security group on the instance that allows the source (public subnet)
+
+## NAT 
+- to allow an instance from private subnet to access internet. you need to create a nat instance on public subnet, then create a for private subnet that goes to internet across the nat instance.
+- nat instance is only a type of ec2 instances, nat gateway is a failover cluster of nat. both allows a private subnet to access internet.
