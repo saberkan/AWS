@@ -265,3 +265,12 @@ at that level you may find CNAME to resolve domaine name to another. but this do
 - nat instance is only a type of ec2 instances, nat gateway is a failover highavailable nat redendant within az. both allows a private subnet to access internet.
 - you can use nat instances to build ha architecture using elbs etc. but it's a pain, just use nat gateway and add route to it.
 - always create a nat gateway in each az to allow failover. otherwise if nat goes down in 1 availability zone you loose access to internet
+
+## NACL
+- when you create a vpc, every subnet within vpc is attached to the default nacl.
+- by default the default nacl allow all inbound and outbound traffic. 
+- you can create a new nacl and attach the same vpc to it. but subnet can be attached to one nacl a time
+- in a nacl we put rules small number is more priority than biggest.
+- you need to create inbound and outbound rules
+- if you use nat, you need to set ephemeral ports to allow servers keeping communication within client
+- for nat ephemeral ports ar 1024-65535
