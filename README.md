@@ -274,3 +274,8 @@ at that level you may find CNAME to resolve domaine name to another. but this do
 - you need to create inbound and outbound rules
 - if you use nat, you need to set ephemeral ports to allow servers keeping communication within client
 - for nat ephemeral ports ar 1024-65535
+- you can create allow or deny rules basing on protocol port range and ip
+
+## ELB on VPC
+- you can not attach a lb to private subnet. 
+- you need at least 2 public subnets to use load balancer
