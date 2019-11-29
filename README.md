@@ -279,3 +279,12 @@ at that level you may find CNAME to resolve domaine name to another. but this do
 ## ELB on VPC
 - you can not attach a lb to private subnet. 
 - you need at least 2 public subnets to use load balancer
+
+## flow log
+- way of logging ip adresses targer and destination accept or reject
+- to create flow log you need to create log instance in cloud watch and iam role
+- you can choose tolog accepta reject or both
+- you can use flow log at vpc m, subnet or network interface level
+- you cannot activate flow log to vpc peered to my vpc unless it's in my account
+- you can't tag flow log
+- you can't change it's configuration after creating ( iam for ex.)
