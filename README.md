@@ -289,3 +289,6 @@ at that level you may find CNAME to resolve domaine name to another. but this do
 - you can't tag flow log
 - you can't change it's configuration after creating ( iam for ex.)
 - trafficz will not be logged:  for aws dns, dhcp, vpc reserved adresses, 169.254... metadata, windows instance for licensing
+
+## bastion
+- bastion is ssh rdp jump instance to connect to ec2 instances  you can't use nat Gateway for that.
