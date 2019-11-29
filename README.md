@@ -288,3 +288,4 @@ at that level you may find CNAME to resolve domaine name to another. but this do
 - you cannot activate flow log to vpc peered to my vpc unless it's in my account
 - you can't tag flow log
 - you can't change it's configuration after creating ( iam for ex.)
+- trafficz will not be logged:  for aws dns, dhcp, vpc reserved adresses, 169.254... metadata, windows instance for licensing
