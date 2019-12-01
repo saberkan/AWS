@@ -299,3 +299,9 @@ at that level you may find CNAME to resolve domaine name to another. but this do
 - Direct connect locations are spread around the work,a part of them is dedicated to aws, the rest of each location is for customers
 - you'll have a dedicated link from datacenter to direct connect (last mile Lan extention), then a aws backbon network from direct connect to aws
 useful for high throughput network load, and secure reliable network
+
+## VPC endpoints
+- Enable to privately connect VPC to AWS services. without need to NAT, VPC, Directconnect. Traffic doesn't leave AWS
+- Enpoint are virtual resources Horizontally scaled
+- there are 2 types: Interface endpoint (ENI: elastic network interface for many service SNS, SQS...), and gateway endpoint (Like NAT gateway fo S3 and DynamoDB)
+- Thus if you need your private VPC to communicate with AWS services. you need to remove NAT gateway from the route. and use a Endpoint for AWS services. Dont forget to add the rule for the EC2 instance to communicate with the required service.
