@@ -292,3 +292,10 @@ at that level you may find CNAME to resolve domaine name to another. but this do
 
 ## bastion
 - bastion is ssh rdp jump instance to connect to ec2 instances  you can't use nat Gateway for that.
+
+## Direct connect
+- Establish dedicated network connection between on-promise to aws
+- it's done in dedicated lines
+- Direct connect locations are spread around the work,a part of them is dedicated to aws, the rest of each location is for customers
+- you'll have a dedicated link from datacenter to direct connect (last mile Lan extention), then a aws backbon network from direct connect to aws
+useful for high throughput network load, and secure reliable network
