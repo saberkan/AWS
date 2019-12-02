@@ -305,3 +305,12 @@ useful for high throughput network load, and secure reliable network
 - Enpoint are virtual resources Horizontally scaled
 - there are 2 types: Interface endpoint (ENI: elastic network interface for many service SNS, SQS...), and gateway endpoint (Like NAT gateway fo S3 and DynamoDB)
 - Thus if you need your private VPC to communicate with AWS services. you need to remove NAT gateway from the route. and use a Endpoint for AWS services. Dont forget to add the rule for the EC2 instance to communicate with the required service.
+
+
+# HA architecture
+## introduction
+- there are e types of lb: application lb, network lb, classic ip. 
+- application lb for layer 7 http, for sample to redirect user to the right server according to the language of the browser.
+- network lb operate at layer 4 tcp, it's used for high performance when needed
+- classic lb: less expensive and legacy lb, operate at layer 7 and use sticky session or headers as x-forwarded-for that gives source ip. when you need simple lb.
+- when application fails lb responde with 504 (gateway timeout)
