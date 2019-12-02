@@ -314,3 +314,10 @@ useful for high throughput network load, and secure reliable network
 - network lb operate at layer 4 tcp, it's used for high performance when needed
 - classic lb: less expensive and legacy lb, operate at layer 7 and use sticky session or headers as x-forwarded-for that gives source ip. when you need simple lb.
 - when application fails lb responde with 504 (gateway timeout)
+
+# lab
+- classic lb does only lb on instances
+- application lb does lb on target group that is a list of instances. 
+- in application lb you can add rules and listeners things you cannot do in classic. 
+- network lb is for high performance. 
+- don't forget to put lb on any az when creating.
