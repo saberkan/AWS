@@ -327,7 +327,7 @@ useful for high throughput network load, and secure reliable network
 - cross zone lb: using lb for different zones to lb. 
 - path patterns to redirect users to the right ec2 instance (or target group) according to the url /context. this is done by listener rule on application lb.
 
-## autoscaling
+## autoscaling 
 - you need to create launch configuration, that willbe used by the security group. 
 - you can define a desired number of instances and min/max.
 - you can define autoscaling according to cpu consumption and interval of time to pup up.
