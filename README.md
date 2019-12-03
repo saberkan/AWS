@@ -321,3 +321,8 @@ useful for high throughput network load, and secure reliable network
 - in application lb you can add rules and listeners things you cannot do in classic. 
 - network lb is for high performance. 
 - don't forget to put lb on any az when creating.
+
+# theory
+- sticky session: bound user to same ec2 than the first call. because he may have saved resources on it. ec2 for classic lb and target group for application lb.
+- cross zone lb: using lb for different zones to lb. 
+- path patterns to redirect users to the right ec2 instance (or target group) according to the url /context. this is done by listener rule on application lb.
