@@ -315,14 +315,19 @@ useful for high throughput network load, and secure reliable network
 - classic lb: less expensive and legacy lb, operate at layer 7 and use sticky session or headers as x-forwarded-for that gives source ip. when you need simple lb.
 - when application fails lb responde with 504 (gateway timeout)
 
-# lab
+## lab
 - classic lb does only lb on instances
 - application lb does lb on target group that is a list of instances. 
 - in application lb you can add rules and listeners things you cannot do in classic. 
 - network lb is for high performance. 
 - don't forget to put lb on any az when creating.
 
-# theory
+## theory
 - sticky session: bound user to same ec2 than the first call. because he may have saved resources on it. ec2 for classic lb and target group for application lb.
 - cross zone lb: using lb for different zones to lb. 
 - path patterns to redirect users to the right ec2 instance (or target group) according to the url /context. this is done by listener rule on application lb.
+
+## autoscaling
+- you need to create launch configuration, that willbe used by the security group. 
+- you can define a desired number of instances and min/max.
+- you can define autoscaling according to cpu consumption and interval of time to pup up.
