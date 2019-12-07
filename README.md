@@ -344,3 +344,8 @@ useful for high throughput network load, and secure reliable network
 - you need to create launch configuration, that willbe used by the security group. 
 - you can define a desired number of instances and min/max.
 - you can define autoscaling according to cpu consumption and interval of time to pup up.
+
+## Elastic beanstlak
+- a compute servicebeside EC2, lambdas, etc.
+- a way of managing and deploying apps into aws, it create S3, EC2, LB, SG and all the needed resources withoud knowing aws.
+- you can configure ecery thing, ec2 instances, LB, etc...
