@@ -2,6 +2,19 @@ Introduction:
 Basic mode: free
 Developer mode 29$/month: one contact can exange by email with support
 Entreprise 100$/month: instant exchange 7/7 24/24 support for stratégique production purpose
+Example of policy statement:
+{
+    "Version": "2012-10-17",
+    "Statement": {
+        "Effect": "Allow",
+        "Action": "service-prefix:action-name",
+        "Resource": "*",
+        "Condition": {
+            "DateGreaterThan": {"aws:CurrentTime": "2017-07-01T00:00:00Z"},
+            "DateLessThan": {"aws:CurrentTime": "2017-12-31T23:59:59Z"}
+        }
+    }
+}
 
 # IAM:
 ## IAM
