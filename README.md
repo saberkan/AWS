@@ -373,3 +373,31 @@ useful for high throughput network load, and secure reliable network
 - group multiple recipients (outputs) using topics
 - pay as you go
 - sqs and sns are both messaging services (sqs is pull, sns is push)
+
+## Elastic transcoder
+- convert media files fromat topc, or mobile or whatever format
+- you pay by minute and resolution you transcode.
+
+## API GATEWAY
+- front api to backend services
+- can be serverle-y ( lambda or dynamodb)
+- can be ec2 or what ever http endpoint
+- you  an connect to cloud watch
+- you can maintain different versions of same api
+- you need to define api, security, path, verbs, and backend target
+- you can set request and réponse transformations
+- you can cache response for ttl to reduce backend calls
+- you need to have same origin policy (same domaine name) to prevent (XSS) CROSS site scripting attacks. this is only coded into browsers, postman and curl doesn't have that.
+- to resolve that you can use CORS to allow one domain to communicate to another domain. this can be done on api Gateway
+
+## KENISIS
+- streaming data and analysis from thousands of resources by few kb to output
+- example : wen stores, social media actions, video games, stock prices, geospatial datadata, iot sensors
+- 3 types:
+1- k. streams: consist of shards that receive different kind of data. that well be analysed by consumers (ec2) and output into s3, rds, dynamo or whatever.
+- k. steam store data to 24h by default. until u days. 
+- shard may process 5 transaction per second and 2Mb of data and 1000 records for writewrite with a total of 1Mb of data. 
+- capacity of stream os sum of capacity of shards.
+2 - k. firehose: doesn't has persistance dont use shard. 
+- you need to do something with data once it arrive. optionally use lambda. and store data into s3 or elastic  search cluster. 
+3 - k.analysis: work with k. stream and k. firehose to analyse data on the flight before storing into s3...
