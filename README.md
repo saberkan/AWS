@@ -359,8 +359,17 @@ useful for high throughput network load, and secure reliable network
 - can store until 2Gb but will be stored in s3
 - 2 types: std sqs (unlimited transactions, meanwhile may deliver many messages at once). fifo sqs (fifo, wait for a message to be consumed to expose next)
 - message maybe duplicated (especially Ith std) so you need to ensure message is delivered only once.
+
 ## SWF
 - workflow processing service with different tasks
 - tasks include steps that my be executable code, scripts, wen services calls, or human tasks. 
 - workflow execution can last 1 year
 - a workflow has starters, deciders (what to do next), and activity workers
+
+## SNS 
+- Simple notification service
+- push based delivery
+- push messages into mobile devices, sms, sqs queues, emails, http endpoints
+- group multiple recipients (outputs) using topics
+- pay as you go
+- sqs and sns are both messaging services (sqs is pull, sns is push)
