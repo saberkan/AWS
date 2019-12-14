@@ -349,3 +349,18 @@ useful for high throughput network load, and secure reliable network
 - a compute servicebeside EC2, lambdas, etc.
 - a way of managing and deploying apps into aws, it create S3, EC2, LB, SG and all the needed resources withoud knowing aws.
 - you can configure ecery thing, ec2 instances, LB, etc...
+
+# Application
+## SQS
+- queue messaging service
+- pull based not push based (consumer come to read)
+- can store 256kb for each message in any text format. 
+- messages can.be kept 1 to 14 days. défaut is 4 days
+- can store until 2Gb but will be stored in s3
+- 2 types: std sqs (unlimited transactions, meanwhile may deliver many messages at once). fifo sqs (fifo, wait for a message to be consumed to expose next)
+- message maybe duplicated (especially Ith std) so you need to ensure message is delivered only once.
+## SWF
+- workflow processing service with different tasks
+- tasks include steps that my be executable code, scripts, wen services calls, or human tasks. 
+- workflow execution can last 1 year
+- a workflow has starters, deciders (what to do next), and activity workers
