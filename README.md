@@ -401,3 +401,15 @@ useful for high throughput network load, and secure reliable network
 2 - k. firehose: doesn't has persistance dont use shard. 
 - you need to do something with data once it arrive. optionally use lambda. and store data into s3 or elastic  search cluster. 
 3 - k.analysis: work with k. stream and k. firehose to analyse data on the flight before storing into s3...
+
+## cognito
+- web identity federation
+- signup sign in service into apps. 
+- recommended for all mobile apps that use aws services. 
+- you can use it with identity broker Facebook with cognito to connect to aws wich map to iam role.
+- uses jwt. 
+- first user connect to cognito that use fb broker. get token that will be converted. then sent as jwt to user. then user use jwt to access identity pool that map the token to use iam role. 
+- act also as a broker. no need to provide your own code. 
+- has user identity pool. handls every thing regarding user registration auth. account recovery.
+- identity pool handls role iam to the user. 
+- when you change credentials. cognito use sns silent notifications. that updates phone laptop and what ever other device where you're auth.
