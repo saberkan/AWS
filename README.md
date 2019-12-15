@@ -427,3 +427,7 @@ useful for high throughput network load, and secure reliable network
 - a lambda function can trigger other lambda functions
 - X-raw may allow to debug lambda..since can be fast complicated
 - lambda can be triggered with s3, cloudwatch, api gateway, lb, code commit, dynamodb, kenisis,sqs, sns, iot, cognito but not rds per example
+- lambda is region based
+
+## Alexa
+-use amazon poly to synthétase text to mp3 on s3
