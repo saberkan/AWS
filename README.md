@@ -413,3 +413,16 @@ useful for high throughput network load, and secure reliable network
 - has user identity pool. handls every thing regarding user registration auth. account recovery.
 - identity pool handls role iam to the user. 
 - when you change credentials. cognito use sns silent notifications. that updates phone laptop and what ever other device where you're auth.
+
+# Serverless
+## intro
+- lambda, upload your code without carrying about hardware os... and implementing lambda functions
+- can be event driven, or respond to http requests through api gateway or aws sdk
+- in lambda each call makes a différent thread. thus scaling is handled differently
+- you don't need to worry about autoscaling in serverless architecture
+- so it scales out not up
+- supports node.js, java, python, go, power shell, C#
+- pricing based on number of request ! first 1 million is free then then 20cts per 1 million + duration of run
+- rds is not serverless. the only is aurora serverless
+- a lambda function can trigger other lambda functions
+- X-raw may allow to debug lambda..since can be fast complicated
