@@ -87,7 +87,7 @@ S3 SLA 99.99 availability, garanty, 99.9999999% durability. One Zone AI has 99.5
 - a security group rule takes effect immediately
 - a security group is stateful, when inbound rule is createe outboud is created too (not showed tto interface)
 - security groups disable everything by default, you can only allow
-- in contrast NACL ((network access control list on vpc) allws to configure allow and block rules. and also it's stateful you need to configure inbound and outboud for each rule.
+- in contrast NACL (network access control list on vpc) allows to configure allow and block rules. and also it's stateless you need to configure inbound and outboud for each rule.
 
 ## EBS
 - see image for types. [EBS types](https://github.com/saberkan/AWS/blob/master/Screenshot_2019-11-14-09-06-32-690_com.udemy.android.jpg)
