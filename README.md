@@ -37,8 +37,8 @@ Example of policy statement:
 - S3 data consistency:  Read after write is consistente (for puts) you'll be enable to read the data, evential consistency (for overwrite put and delete that can take time to propagate) you may get older version for a moment.
 S3 SLA 99.99 availability, garanty, 99.9999999% durability
 - S3 has : Tiered sotrage, lifecycle management, Versionning, Encryption, MFA delete, secure access through Access control list, and Bucket policies
-- Storage CLasses: S3 std (same as discussed before), S3 - IA (Infrequently Access, lower fee but fast access when needed, charged for retreival fees) , S3 One Zone - IA (No data resilience through AZ, lower cost), S3 - IT (intelligent Riering: optimize costs moving data to must cost effective tier, whitout impact on performance), S3 Glacier (Archive, super cheap, retreival time form minutes to hours rather than milliseconds for others), S2 Glacier Deep Archive (lower cost, retreival within 12h)
-- Charging: Storage, Requests, Storage  management Pricing, Data transfer, Transfer accelecratin, Cross Region Replicaiton
+- Storage CLasses: S3 std (same as discussed before), S3 - IA (Infrequently Access, lower fee but fast access when needed, charged for retreival fees) , S3 One Zone - IA (No data resilience through AZ, lower cost), S3 - IT (intelligent Tiering: optimize costs moving data to must cost effective tier, whitout impact on performance), S3 Glacier (Archive, super cheap, retreival time form minutes to hours rather than milliseconds for others), S3 Glacier Deep Archive (lower cost, retreival within 12h)
+- Charging: Storage, Requests, Storage  management Pricing, Data transfer, Transfer accelerating, Cross Region Replication
 - S3 transfer acceleration from user to S3, use CloudFront edge location
 - Bucket in region but S3 main dashboard is global
 - Change storage class is possible on object or bucket
@@ -46,7 +46,7 @@ S3 SLA 99.99 availability, garanty, 99.9999999% durability
 - Versioning: Cannot be disabled once enabled, intergrates with lifecycle rules, allows MFA
 - Uploading new version makes files not public access again, it changes permissions exept for old version
 - Sum of bucket size, is some of versions of all the objects
-- Delete an opbject it just make a delete marker, wich is a new version, old version keep saved. Deleting delete marker retores the file
+- Delete an object it just make a delete marker, wich is a new version, old version keep saved. Deleting delete marker restores the file
 - Lifecycle rule automate transition to tier sotrage, and manage expiry of objects and works with versionning buckets (applied to current and previous if selected)
 - Replication can be done for all bucket or using prefix, on same or different account , during replication can change storage Classes
 - Replication doesnt replicat old objects even when versionned. it replicates only new files and new version of old files
@@ -69,7 +69,7 @@ S3 SLA 99.99 availability, garanty, 99.9999999% durability
 ## Storage Gateway
 - virtual or physical appliance that connects on-promise datacenter to cloud storage.
 - it comes also as vm for vmware exsi or Microsoft hyper-v
-- it has three types : file Gateway as NFS/SMB than can be stored into s3, Volume Storage (block) as ISCSI that stores volumes (all data is stored backed up as S3 EBS into S3) as snapshots or only cached volume (that backsup only frequently accessed data, and Virtual Tape Lobriry (vtl) that backsup tapes into S3. 
+- it has three types : file Gateway as NFS/SMB than can be stored into s3, Volume Storage (block) as ISCSI that stores volumes (all data is stored backed up as S3 EBS into S3) as snapshots or only cached volume (that backsup only frequently accessed data, and Virtual Tape Library (vtl) that backsup tapes into S3. 
 
 # EC2
 ## INTRODUCTION
