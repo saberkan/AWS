@@ -37,7 +37,7 @@ Example of policy statement:
 - A bucket has a universal unique name and web adress
 - consist of : key (name) value (content sequence of bytes), and version ID (for versionning), metadata (data about data), subresource (access control and Torrent)
 - S3 data consistency:  Read after write is consistente (for puts) you'll be enable to read the data, evential consistency (for overwrite put and delete that can take time to propagate) you may get older version for a moment.
-S3 SLA 99.99 availability, garanty, 99.9999999% durability
+S3 SLA 99.99 availability, garanty, 99.9999999% durability. One Zone AI has 99.50 availability instead
 - S3 has : Tiered sotrage, lifecycle management, Versionning, Encryption, MFA delete, secure access through Access control list, and Bucket policies
 - Storage CLasses: S3 std (same as discussed before), S3 - IA (Infrequently Access, lower fee but fast access when needed, charged for retreival fees) , S3 One Zone - IA (No data resilience through AZ, lower cost), S3 - IT (intelligent Tiering: optimize costs moving data to must cost effective tier, whitout impact on performance), S3 Glacier (Archive, super cheap, retreival time form minutes to hours rather than milliseconds for others), S3 Glacier Deep Archive (lower cost, retreival within 12h)
 - Charging: Storage, Requests, Storage  management Pricing, Data transfer, Transfer accelerating, Cross Region Replication
