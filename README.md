@@ -1,4 +1,5 @@
-Introduction:
+# Introduction:
+<pre>
 Basic mode: free
 Developer mode 29$/month: one contact can exange by email with support
 Entreprise 100$/month: instant exchange 7/7 24/24 support for stratégique production purpose
@@ -15,6 +16,7 @@ Example of policy statement:
         }
     }
 }
+</pre>
 
 # IAM:
 ## IAM
