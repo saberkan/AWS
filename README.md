@@ -77,7 +77,7 @@ S3 SLA 99.99 availability, garanty, 99.9999999% durability. One Zone AI has 99.5
 ## INTRODUCTION
 - Élastic compute resources
 - 3 types of pricing: on demand by hour or second, reserved ( 1 to 3 years) then you pay as you go. less expensive ( it had 3 typez standard 75% less, convertible to change type of machine 54% less, and schedulable you reserve only scheduled time.
-- many types of resources : FIGHTDRMCPXZAU F(financial analysis big data) I (IOPS fast storage as noSQL) G (GRAPHICS) H (High disk as DB) T ( low cost) D (Disk) R (High Ram) P (GRAPHICS) X (High RAM) Z (high ram and cpu) A (arm based) U (bar-metal)
+- many types of resources : FIGHTDRMCPXZAU F(financial analysis big data) I (IOPS fast storage as noSQL) G (GRAPHICS) H (High disk as DB) T ( low cost) D (Disk) R (High Ram) M(main choice) C(CPU) P (GRAPHICS) X (High RAM) Z (high ram and cpu) A (arm based) U (bar-metal)
 
 ## EC2
 - root disk cannot be encrypted at starting time, else disks can
